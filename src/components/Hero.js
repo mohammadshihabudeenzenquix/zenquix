@@ -36,52 +36,58 @@ const slides = [
 
 const Hero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setDirection(1);
+        const slideInterval = setInterval(() => {
             setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-        }, 5000); // 5 seconds interval
+        }, 4000); // Change slide every 3 seconds
 
-        return () => clearInterval(interval);
+        return () => clearInterval(slideInterval);
     }, []);
 
     const { title, description, imgSrc, link } = slides[currentSlide];
 
     const slideVariants = {
-        initial: { opacity: 0, scale: 0.8 },
-        animate: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
-        exit: { opacity: 0, scale: 0.8, transition: { duration: 0.8 } },
+        initial: {
+            opacity: 0,
+            x: 100,
+            scale: 0.9
+        },
+        animate: {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            transition: { duration: 0.8 }
+        },
+        exit: {
+            opacity: 0,
+            x: -100,
+            scale: 0.9,
+            transition: { duration: 0.8 }
+        },
     };
 
     return (
         <motion.div 
-            className="hero" 
+            className="hero relative max-h-full overflow-hidden" 
             id='hero'
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             transition={{ duration: 1 }}
         >
-            <div>
-                <NavBar />
-            </div>
+            <NavBar />
             
-            <motion.div 
-                className="m-auto overflow-hidden mx-4 mt-8 lg:mt-4 p-2 md:p-12 h-5/6" 
-                initial={{ scale: 0.8, opacity: 0 }} 
-                animate={{ scale: 1, opacity: 1 }} 
-                transition={{ delay: 0.2, duration: 0.5 }}
-            >
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-50"></div>
+
+            <div className="relative mx-4 mt-8 lg:mt-4 p-2 md:p-12 h-full min-h-screen flex items-center justify-center">
                 <AnimatePresence>
                     <motion.div 
-                        className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left"
+                        className="absolute left-10 flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left"
                         key={currentSlide} // Key prop to trigger the animation on slide change
                         variants={slideVariants}
                         initial="initial"
                         animate="animate"
                         exit="exit"
-                        custom={direction}
                     >
                         <div className="lg:w-1/2 flex flex-col justify-center">
                             <h1 className="mb-5 md:text-5xl text-3xl font-bold text-primary self-start">
@@ -91,7 +97,7 @@ const Hero = () => {
                                 {description}
                             </div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
-                                <Link to={link} className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
+                                <Link to={link} className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0 transition-transform transform hover:scale-105">
                                     Learn more
                                     <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -101,11 +107,20 @@ const Hero = () => {
                         </div>
 
                         <div className="flex lg:justify-end w-full lg:w-1/2">
-                            <img alt="service img" className="rounded-t float-right w-[450px] h-[450px] " src={imgSrc} />
+                            <img alt="service img" className="rounded-t float-right w-full lg:w-[450px] lg:h-[450px] object-fill" src={imgSrc} />
                         </div>
                     </motion.div>
                 </AnimatePresence>
-            </motion.div>
+                <div className="absolute bottom-[10%] left-[10%] w-[80%] h-0.5 bg-primary-300">
+                    <motion.div
+                        className="h-full bg-white"
+                        initial={{ width: '0%' }}
+                        animate={{ width: '100%' }}
+                        transition={{ duration: 4    }} // Animate progress bar fill over 3 seconds
+                        key={currentSlide} // Key prop to trigger animation on slide change
+                    />
+                </div>
+            </div>
         </motion.div>
     );
 }
