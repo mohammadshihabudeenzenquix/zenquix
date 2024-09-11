@@ -1,8 +1,12 @@
 import React from 'react';
-import img from '../images/web.svg'; 
-import img2 from '../images/app.svg';
-import img3 from '../images/hosting.svg';
-import img4 from '../images/consultation.svg';
+import img from '../images/services/Network.svg'; 
+import img2 from '../images/services/Cloud.svg';
+import img3 from '../images/services/Datacenter.svg';
+import img4 from '../images/services/End_User.svg';
+import img5 from '../images/services/Software.svg';
+import img6 from '../images/services/Consultancy.svg';
+import img7 from '../images/services/It_Staff.svg';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
 
@@ -21,44 +25,86 @@ const Services = () => {
                     <div className="px-12" data-aos="fade-down" data-aos-delay="600">
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                             
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
                                 <div className="m-2 text-justify text-sm">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">Web Development</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center">Networking Services</h2>
                                     <p className="text-md font-medium">
-                                        We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.
-                                    </p>
+                                    We provide robust and secure network solutions tailored to your organization's requirements. From designing and implementing networks to optimizing performance and ensuring network security, our experts ensure seamless connectivity and reliable communication.
+                                        </p>
                                 </div>
+                                <div className="text-center mt-[30px]">
+                                <Link to="/services-details" className="text-blue-700 hover:underline hover:text-white  ">Read More</Link>
+                            </div>
                             </div>
 
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
                                 <div className="m-2 text-justify text-sm">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img2} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">Mobile App Development</h2>
+                                    <h2 className="font-semibold my-2 text-2xl text-center">Cloud Services</h2>
                                     <p className="text-md font-medium">
-                                        We develop high-quality, custom cross-platform mobile applications that are robust and optimized for performance, scalability, and accessibility.
-                                    </p>
+                                    Harness the power of the cloud to drive agility and scalability in your operations. Our expert team assists you in formulating a cloud strategy, seamlessly migrating your infrastructure, and managing cloud environments.</p>
                                 </div>
+                                <div className="text-center mt-[70px]">
+                                <Link to="/services-details" className="text-blue-700 hover:underline hover:text-white">Read More</Link>
+                            </div>
                             </div>
 
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
                                 <div className="m-2 text-justify text-sm">
                                     <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">Domain and Hosting Services</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center ">Datacenter Services</h2>
                                     <p className="text-md font-medium">
-                                        We provide domain registration and web hosting services to individuals and organizations to enable them gain visibility in the digital space.
-                                    </p>
+                                    Entrust your critical infrastructure to our experienced team for comprehensive datacenter management. We provide end-to-end solutions, including server management, virtualization, storage optimization, and disaster recovery planning. </p>
                                 </div>
+                                <div className="text-center mt-8">
+                                <Link to="/services-details" className="text-blue-700 hover:underline hover:text-white">Read More</Link>
+                            </div>
                             </div>
 
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
                                 <div className="m-2 text-justify text-sm">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">General IT Consultations</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center ">End User Services</h2>
                                     <p className="text-md font-medium">
-                                        Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions.
-                                    </p>
+                                    Empower your workforce with reliable and efficient IT support. Our end user services cover help desk support, software installations and upgrades, device management, and user training. We prioritize user satisfaction, ensuring your employees have the tools and assistance they need to thrive. </p>
                                 </div>
+                                <div className="text-center mt-[10px]">
+                                <Link to="/services-details" className="text-blue-700 hover:underline hover:text-white">Read More</Link>
+                            </div>
+                            </div>    
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
+                                <div className="m-2 text-justify text-sm">
+                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img5} />
+                                    <h2 className="font-semibold my-4 text-2xl text-center ">Software Services</h2>
+                                    <p className="text-md font-medium">
+                                    Transform your business with tailor-made software solutions that meet your specific requirements. Our skilled software development team brings your ideas to life, crafting custom                                    </p>
+                                </div>
+                                <div className="text-center mt-[90px]">
+                                <Link to="/services-details" className="text-blue-700 hover:underline hover:text-white">Read More</Link>
+                            </div>
+                            </div>    
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
+                                <div className="m-2 text-justify text-sm">
+                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img6} />
+                                    <h2 className="font-semibold my-4 text-2xl text-center ">Consulting Services</h2>
+                                    <p className="text-md font-medium">
+                                    Benefit from our strategic IT consulting services, where we assess your current IT landscape, identify opportunities for improvement, and provide recommendations to align your technology investments with your business goals. </p>
+                                </div>
+                                <div className="text-center mt-7">
+                                <Link to="/services-details" className="text-blue-700 hover:underline hover:text-white">Read More</Link>
+                            </div>
+                            </div>    
+                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
+                                <div className="m-2 text-justify text-sm">
+                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img7} />
+                                    <h2 className="font-semibold my-2 text-2xl text-center ">IT Staff Augmentation</h2>
+                                    <p className="text-md font-medium">
+                                    Fill critical skill gaps in your organization with our IT staff augmentation services. We provide highly skilled and experienced professionals to supplement your existing team and ensure smooth project execution.</p>
+                                </div>
+                                <div className="text-center mt-4">
+                                <Link to="/services-details" className="text-blue-700 hover:underline hover:text-white">Read More</Link>
+                            </div>
                             </div>                    
                         </div>
                     </div>
