@@ -21,7 +21,7 @@ const clientsRow2 = [p7, p8, p9, p10, p11, p12, p13, p14];
 
 const Clients = () => {
   return (
-    <div className="mt-8 mb-20 ">
+    <div className="mt-8 mb-20 " id="partner">
       <section data-aos="fade-up">
         <div className="py-4 my-4">
           <h2 className="my-2 text-3xl font-bold text-center text-blue-900 uppercase">
