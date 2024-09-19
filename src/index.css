@@ -37,4 +37,12 @@ body {
     }
   }}
 
-
+  .cardArea {
+    flex-direction: row !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
