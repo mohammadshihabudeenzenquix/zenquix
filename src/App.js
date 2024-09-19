@@ -51,7 +51,7 @@ function App() {
             <Route path="/cloud-services" element={<CloudServices/>} /> 
             <Route path="/Datacenter-services" element={<DatacenterServices/>} /> 
             <Route path="/EndUser-services" element={<EndUserServices/>} /> 
-            <Route path="/Sofware-services" element={<SoftwareServices/>} /> 
+            <Route path="/Software-services" element={<SoftwareServices/>} /> 
             <Route path="/Consulting-Services" element={<ConsultingServices/>} /> 
             <Route path="/ITAugmentation" element={<ITAugmentaion/>} /> 
           </Routes>

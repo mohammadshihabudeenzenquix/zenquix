@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from "../components/Footer";
 import NavBar from '../components/Navbar/NavBar';
 import SoftS from '../images/software/sw2.webp';
 
 const SoftwareServices = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <div>

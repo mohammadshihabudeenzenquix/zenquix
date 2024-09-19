@@ -1,10 +1,13 @@
 import emailjs from "emailjs-com";
 import Notiflix from "notiflix";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import NavBar from "../components/Navbar/NavBar";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,7 +30,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     document.getElementById("submitBtn").disabled = true;
-    document.getElementById("submitBtn").innerHTML = "Loading...";
+    document.getElementById("submitBtn").innerHTML = "Sending.....";
 
     // EmailJS send function
     emailjs
@@ -69,7 +72,7 @@ const Contact = () => {
       </div>
       <div
         id="contact"
-        className="flex items-center justify-center w-full py-12 mt-8 bg-white lg:py-28 lg:ml-36">
+        className="flex items-center justify-center w-full py-12 mt-8 bg-white lg:py-28 lg:ml-36 " data-aos="fade-down" data-aos-delay="600">
         <div className="container px-4 mx-auto my-8 lg:px-20">
           <form onSubmit={sendEmail}>
             <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 rounded-2xl">

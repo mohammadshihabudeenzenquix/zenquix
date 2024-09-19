@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../components/Footer';
 import NavBar from '../components/Navbar/NavBar';
 import net2 from '../images/network/datacenter-nw.webp';
@@ -8,6 +8,11 @@ import net5 from '../images/network/nw-supp.webp';
 import net3 from '../images/network/sdn.webp';
 
 const NetworkServices = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <>
     <div>

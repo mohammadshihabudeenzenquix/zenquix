@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import NavBar from '../components/Navbar/NavBar';
 import clud1 from '../images/cloud/bg-1.webp';
 
 const CloudServices = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <div>

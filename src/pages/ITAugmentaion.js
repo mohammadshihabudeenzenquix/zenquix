@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import NavBar from '../components/Navbar/NavBar';
 import ItAugS from '../images/itstaff/itstaff-2.webp';
 
 const ITAugmentaion = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div>

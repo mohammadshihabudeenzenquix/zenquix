@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import NavBar from "../components/Navbar/NavBar";
 import Endus from "../images/enduser/enduser1.webp";
 
 const EndUserServices = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div>
