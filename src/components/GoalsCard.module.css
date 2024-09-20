@@ -1,7 +1,8 @@
 /* Typography */
 .cardFrontHeading {
     font-size: 1.5rem;
-    margin-top: 0.25rem;
+    margin-top: -4rem;
+    font-weight: 600;
   }
   
   .insidePageHeading {
