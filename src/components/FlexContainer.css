@@ -1,0 +1,95 @@
+/* Container for the cards */
+.container {
+  max-width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem; /* Adjusts the gap between cards */
+  margin: 4rem auto;
+}
+
+/* Card */
+.card {
+  width: calc(32.333% - 2rem); /* Fits three cards per row with gaps */
+  background-color: #143f9c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+  transform: perspective(800px) rotateY(25deg); /* Initial perspective effect */
+  transition: transform 0.5s, background-color 0.3s ease-in-out; /* Smooth transitions */
+  overflow: hidden;
+  height: 400px; /* Fixed height */
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hover effects for transformation */
+.card:hover {
+  transform: perspective(800px) rotateY(0deg); /* Removes rotation on hover */
+  background-color: rgb(15, 31, 77); /* Darkens background on hover */
+}
+
+/* Icon Wrapper */
+.iconWrapper {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 0;
+}
+
+/* Adjust icon size */
+.iconWrapper1 {
+  font-size: 4rem;
+}
+
+/* Card Content */
+.cardContent {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  height: 100%;
+  overflow-y: auto; /* Scrollable if content overflows */
+}
+
+/* Heading in card */
+.cardContent h2 {
+  margin-top: 70px;
+}
+
+/* Card content */
+.content {
+  opacity: 1;
+}
+
+.card:hover .content {
+  opacity: 1;
+  color: white;
+}
+
+.card:hover .iconWrapper {
+  color: white;
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(48% - 1rem); /* Two cards per row on smaller screens */
+    height: 300px; /* Adjust height for mobile */
+  }
+
+  .iconWrapper1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: calc(100% - 2rem); /* One card per row on small screens */
+    height: 450px; /* Adjust height */
+  }
+}
