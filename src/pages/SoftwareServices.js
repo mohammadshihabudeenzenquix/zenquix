@@ -22,7 +22,7 @@ const SoftwareServices = () => {
         data-aos="zoom-in"
       >
         <form id="demoProductForm">
-          <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[10%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[10%]">
+          <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[90%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[10%]">
             <div className="flex">
               <h1 className="ml-8 text-4xl font-bold text-center text-blue-900 uppercase lg:text-left">
               Software Services

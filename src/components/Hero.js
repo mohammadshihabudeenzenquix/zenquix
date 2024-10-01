@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar/NavBar';
 import cloud from "../images/vectors/Cloud1.png";
 import datacenter from "../images/vectors/Datacenter.png";
+import enduser from "../images/vectors/Endusers.png";
 import heroImg from '../images/vectors/Hero.png';
 import network from "../images/vectors/Network.png";
 import software from "../images/vectors/Software.png";
@@ -42,7 +43,7 @@ const slides = [
     {
         title: "End-User Services",
         description: "Transform your business with custom software solutions tailored to your unique needs. Our expert team delivers high-quality, scalable applications designed to streamline processes and foster innovation.",
-        imgSrc: software,
+        imgSrc: enduser,
         link: "/Sofware-services",
     },
 ];

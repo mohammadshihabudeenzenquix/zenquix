@@ -7,13 +7,13 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import your service images
-import img2 from '../images/services/Cloud.svg';
 import img6 from '../images/services/Consultancy.svg';
-import img3 from '../images/services/Datacenter.svg';
-import img4 from '../images/services/End_User.svg';
 import img7 from '../images/services/It_Staff.svg';
-import img from '../images/services/Network.svg';
-import img5 from '../images/services/Software.svg';
+import img2 from '../images/vectors/Cloud1.png';
+import img3 from '../images/vectors/Datacenter.png';
+import img4 from '../images/vectors/Endusers.png';
+import img from '../images/vectors/Network.png';
+import img5 from '../images/vectors/Software.png';
 
 const Services = () => {
     return (
@@ -49,55 +49,50 @@ const Services = () => {
                     >
                         <SwiperSlide style={{ minWidth: '300px', maxWidth: '400px' }}> {/* Set min/max width for cards */}
                             <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
-                                <img alt="Networking Services" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img} />
-                                <h2 className="my-4 text-2xl font-semibold text-center">Networking Services</h2>
+                                <img alt="Networking Services" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out w-[60%] h-[40%] ml-16" src={img} />
+                                <h2 className="my-10 text-2xl font-semibold text-center">Networking Services</h2>
                                 <p className="font-medium text-md">
-                                    We provide robust and secure network solutions tailored to your organization's requirements.
-                                </p>
+                                We provide robust and secure network solutions tailored to your organization's requirements. From designing and implementing networks to optimizing performance and ensuring network security, our experts ensure seamless connectivity and reliable communication.                                </p>
                                 <Link to="/services-details" className="block mt-3 text-center text-blue-700 hover:underline hover:text-white">Read More</Link>
                             </div>
                         </SwiperSlide>
 
                         <SwiperSlide style={{ minWidth: '300px', maxWidth: '400px' }}>
                             <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
-                                <img alt="Cloud Services" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img2} />
-                                <h2 className="my-2 text-2xl font-semibold text-center">Cloud Services</h2>
+                                <img alt="Cloud Services" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out w-[60%] h-[40%] ml-16" src={img2} />
+                                <h2 className="my-10 text-2xl font-semibold text-center">Cloud Services</h2>
                                 <p className="font-medium text-md">
-                                    Harness the power of the cloud to drive agility and scalability in your operations.
-                                </p>
+                                Harness the power of the cloud to drive agility and scalability in your operations. Our expert team assists you in formulating a cloud strategy, seamlessly migrating your infrastructure, and managing cloud environments.                                 </p>
                                 <Link to="/cloud-services" className="block mt-3 text-center text-blue-700 hover:underline hover:text-white">Read More</Link>
                             </div>
                         </SwiperSlide>
 
                         <SwiperSlide style={{ minWidth: '300px', maxWidth: '400px' }}>
                             <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
-                                <img alt="Datacenter Services" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                <h2 className="my-4 text-2xl font-semibold text-center">Datacenter Services</h2>
-                                <p className="font-medium text-md">
-                                    Entrust your critical infrastructure to our experienced team for comprehensive datacenter management.
-                                </p>
+                                <img alt="Datacenter Services" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out w-[80%] h-[50%] ml-10" src={img3} />
+                                <h2 className="my-0 text-2xl font-semibold text-center">Datacenter Services</h2>
+                                <p className="mt-4 font-medium text-md">
+                                Entrust your critical infrastructure to our experienced team for comprehensive datacenter management. We provide end-to-end solutions, including server management, virtualization, storage optimization, and disaster recovery planning.                                </p>
                                 <Link to="/datacenter-services" className="block mt-3 text-center text-blue-700 hover:underline hover:text-white">Read More</Link>
                             </div>
                         </SwiperSlide>
 
                         <SwiperSlide style={{ minWidth: '300px', maxWidth: '400px' }}>
                             <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
-                                <img alt="End User Support" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
+                                <img alt="End User Support" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out w-[60%] h-[50%] ml-16" src={img4} />
                                 <h2 className="my-4 text-2xl font-semibold text-center">End User Support</h2>
                                 <p className="font-medium text-md">
-                                    Our dedicated support team ensures seamless operations for your end users.
-                                </p>
+                                Empower your workforce with reliable and efficient IT support. Our end user services cover help desk support, software installations and upgrades, device management, and user training.</p>
                                 <Link to="/EndUser-services" className="block mt-3 text-center text-blue-700 hover:underline hover:text-white">Read More</Link>
                             </div>
                         </SwiperSlide>
 
                         <SwiperSlide style={{ minWidth: '300px', maxWidth: '400px' }}>
                             <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group h-[600px]">
-                                <img alt="Software Development" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img5} />
+                                <img alt="Software Development" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out w-[70%] h-[50%] ml-16" src={img5} />
                                 <h2 className="my-4 text-2xl font-semibold text-center">Software Development</h2>
                                 <p className="font-medium text-md">
-                                    We build custom software solutions that align with your business needs.
-                                </p>
+                                Transform your business with tailor-made software solutions that meet your specific requirements. Our skilled software development team brings your ideas to life, crafting custom                                </p>
                                 <Link to="/Software-services" className="block mt-3 text-center text-blue-700 hover:underline hover:text-white">Read More</Link>
                             </div>
                         </SwiperSlide>

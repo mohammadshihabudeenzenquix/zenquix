@@ -25,7 +25,7 @@ const NetworkServices = () => {
       <div id="demo" className="flex items-center justify-center w-full py-12 mt-8 bg-white lg:py-24">
         <div className="container px-4 mx-auto my-8 lg:px-20" data-aos="zoom-in">
           <form id="demoProductForm">
-            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[10%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[10%]">
+            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[90%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[10%]">
               <div className="flex">
                 <h1 className="ml-8 text-4xl font-bold text-center text-blue-900 uppercase lg:text-left">
                   Enterprise Networking
@@ -64,7 +64,7 @@ const NetworkServices = () => {
       <div id="demo1" className="flex items-center justify-center w-full py-12 bg-white lg:py-24 lg:-mt-[10%]">
         <div className="container px-4 mx-auto my-8 lg:px-20" data-aos="zoom-in">
           <form >
-            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[10%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[25%]">
+            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[90%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[25%]">
               <div className="flex">
                 <h1 className="ml-8 text-4xl font-bold text-center text-blue-900 uppercase lg:text-left">
                 Datacenter Networking
@@ -87,7 +87,7 @@ const NetworkServices = () => {
           </form>
 
           {/* Image Section */}
-          <div className="w-full px-8 py-6 ml-auto bg-blue-100 lg:-mt-[20%] lg:w-[35%] rounded-2xl lg:ml-[10%]">
+          <div className="w-full px-8 py-6 ml-auto bg-blue-100 lg:-mt-[20%] lg:w-[35%] rounded-2xl lg:ml-[-30%]">
             <img src={net2} alt="Networking" className="rounded-2x" />
           </div>
         </div>
@@ -97,7 +97,7 @@ const NetworkServices = () => {
      <div id="demo" className="flex items-center justify-center w-full py-12 bg-white lg:py-24 lg:-mt-[10%]">
         <div className="container px-4 mx-auto my-8 lg:px-20" data-aos="zoom-in">
           <form >
-            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[10%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[10%]">
+            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[90%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[10%]">
               <div className="flex">
                 <h1 className="ml-8 text-4xl font-bold text-center text-blue-900 uppercase lg:text-left">
                 Software Defined Networking
@@ -129,7 +129,7 @@ const NetworkServices = () => {
        <div id="demo1" className="flex items-center justify-center w-full py-12 bg-white lg:py-24 lg:-mt-[10%]">
         <div className="container px-4 mx-auto my-8 lg:px-20" data-aos="zoom-in">
           <form >
-            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[10%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[25%]">
+            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[90%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[25%]">
               <div className="flex">
                 <h1 className="ml-8 text-4xl font-bold text-center text-blue-900 uppercase lg:text-left">
                 Network Security
@@ -152,7 +152,7 @@ const NetworkServices = () => {
           </form>
 
           {/* Image Section */}
-          <div className="w-full px-8 py-6 ml-auto bg-blue-100 lg:-mt-[20%] lg:w-[35%] rounded-2xl lg:ml-[10%]">
+          <div className="w-full px-8 py-6 ml-auto bg-blue-100 lg:-mt-[26%] lg:w-[35%] rounded-2xl lg:ml-[-30%]">
             <img src={net4} alt="Networking" className='w-[100%] rounded-2x' />
           </div>
         </div>
@@ -162,7 +162,7 @@ const NetworkServices = () => {
       <div id="demo" className="flex items-center justify-center w-full py-12 lg:-mt-[10%] bg-white lg:py-24">
         <div className="container px-4 mx-auto my-8 lg:px-20" data-aos="zoom-in">
           <form id="demoProductForm">
-            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[10%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[10%]">
+            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[70%] lg:h-[90%] lg:pl-20 lg:pr-40 rounded-2xl lg:ml-[10%]">
               <div className="flex">
                 <h1 className="ml-8 text-4xl font-bold text-center text-blue-900 uppercase lg:text-left">
                 Network Support Services
