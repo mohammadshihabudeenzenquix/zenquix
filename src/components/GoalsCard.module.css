@@ -219,23 +219,22 @@
   }
   /* Scrollbar Styling */
   .insidePageContainer::-webkit-scrollbar {
-    width: 8px;
+    width: 3px;
   }
   
   .insidePageContainer::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #ffffff; /* Track background */
   }
   
   .insidePageContainer::-webkit-scrollbar-thumb {
-    background-color: #888; 
+    background-color: #3c9ed7; /* Same blue color as the card */
     border-radius: 20px;
     border: 2px solid #f1f1f1;
   }
   
   .insidePageContainer::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #2b93d1; /* Slightly darker blue on hover */
   }
-  
   /* Adjust width for smaller screens */
   @media (max-width: 768px) {
     .card {

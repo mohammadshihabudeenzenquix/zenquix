@@ -2,10 +2,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar/NavBar';
-import cloud from "../images/services/Cloud.svg";
-import network from "../images/services/Network.svg";
-import software from "../images/services/Software.svg";
-import heroImg from '../images/web-dev.svg';
+import cloud from "../images/vectors/Cloud1.png";
+import datacenter from "../images/vectors/Datacenter.png";
+import heroImg from '../images/vectors/Hero.png';
+import network from "../images/vectors/Network.png";
+import software from "../images/vectors/Software.png";
 
 const slides = [
     {
@@ -28,6 +29,18 @@ const slides = [
     },
     {
         title: "Software Development",
+        description: "Transform your business with custom software solutions tailored to your unique needs. Our expert team delivers high-quality, scalable applications designed to streamline processes and foster innovation.",
+        imgSrc: software,
+        link: "/Sofware-services",
+    },
+    {
+        title: "Datacenter Services",
+        description: "Transform your business with custom software solutions tailored to your unique needs. Our expert team delivers high-quality, scalable applications designed to streamline processes and foster innovation.",
+        imgSrc: datacenter,
+        link: "/Sofware-services",
+    },
+    {
+        title: "End-User Services",
         description: "Transform your business with custom software solutions tailored to your unique needs. Our expert team delivers high-quality, scalable applications designed to streamline processes and foster innovation.",
         imgSrc: software,
         link: "/Sofware-services",
@@ -77,7 +90,7 @@ const Hero = () => {
         >
             <NavBar />
             
-            <div className="absolute inset-0 opacity-50 bg-gradient-to-t from-blue-900 to-transparent"></div>
+            <div className="absolute inset-0 opacity-50 bg-gradient-to-t to-transparent"></div>
 
             <div className="relative flex items-center justify-center h-full min-h-screen p-2 mx-4 mt-8 lg:mt-4 md:p-12">
                 <AnimatePresence>
@@ -90,10 +103,10 @@ const Hero = () => {
                         exit="exit"
                     >
                         <div className="flex flex-col justify-center lg:w-1/2">
-                            <h1 className="self-start mb-5 text-3xl font-bold md:text-5xl text-primary">
+                            <h1 className="self-start mb-5 text-3xl font-bold text-black md:text-5xl">
                                 {title}
                             </h1>
-                            <div className="mb-5 text-xl font-semibold tracking-tight text-gray-500">
+                            <div className="mb-5 text-xl tracking-tight text-gray-500 ">
                                 {description}
                             </div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
@@ -105,15 +118,16 @@ const Hero = () => {
                                 </Link>
                             </div>
                         </div>
+                        
 
-                        <div className="flex w-full lg:justify-end lg:w-1/2">
-                            <img alt="service img" className="rounded-t float-right w-full lg:w-[450px] lg:h-[450px] object-fill" src={imgSrc} />
+                        <div className="flex w-full lg:justify-center lg:w-1/2">
+                            <img alt="service img" className="rounded-t float-right w-full lg:w-[450px] lg:h-[450px] object-fill mb-24 mr-12" src={imgSrc} />
                         </div>
                     </motion.div>
                 </AnimatePresence>
                 <div className="absolute bottom-[10%] left-[10%] w-[80%] h-0.5 bg-primary-300">
                     <motion.div
-                        className="h-full bg-white"
+                        className="h-full bg-blue-900"
                         initial={{ width: '0%' }}
                         animate={{ width: '100%' }}
                         transition={{ duration: 4    }} // Animate progress bar fill over 3 seconds

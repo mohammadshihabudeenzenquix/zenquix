@@ -13,7 +13,7 @@ const FlexContainer = () => {
         </div>
         <div className="cardContent">
           <h2>Our Mission</h2>
-          <p className="content">
+          <p className="mt-5 content">
             At ZenQuix Technologies, our mission is to go beyond being a
             standard IT services provider. We are passionate about transforming
             businesses through technology, driving innovation, and delivering
@@ -28,7 +28,7 @@ const FlexContainer = () => {
         </div>
         <div className="cardContent">
           <h2>Our Vision</h2>
-          <p className="content">
+          <p className="mt-5 content">
             ZenQuix Technologies's vision is to lead the way as a premier
             provider of comprehensive IT services, renowned for our innovative
             solutions, expertise, and unwavering commitment to our clients'
@@ -39,20 +39,19 @@ const FlexContainer = () => {
       </div>
 
       <div className="card">
-        <div className="iconWrapper ">
+        <div className="iconWrapper">
           <IoDiamond className="iconWrapper1" />
         </div>
-        <div className="cardContent mt-20">
+        <div className="cardContent">
           <h2>Core Values</h2>
-          <p className="content ">
-            At ZenQuix Technologies, our core values are the guiding principles
-            that define our company. We are driven by a commitment to
-            excellence, always striving to deliver the highest quality IT
-            services. Integrity is at the forefront of our interactions,
-            ensuring honesty, transparency, and trust in all relationships. Our
-            customer focus drives us to listen attentively, understand needs
-            deeply, and provide personalized solutions. Innovation is in our
-            DNA, as we embrace emerging technologies and creative thinking to
+          <p className="mt-5 content">
+            At ZenQuix Technologies, our core values are the guiding principles that
+            define our company. We are driven by a commitment to excellence, always
+            striving to deliver the highest quality IT services. Integrity is at the
+            forefront of our interactions, ensuring honesty, transparency, and trust
+            in all relationships. Our customer focus drives us to listen attentively,
+            understand needs deeply, and provide personalized solutions. Innovation is
+            in our DNA, as we embrace emerging technologies and creative thinking to
             empower our clients.
           </p>
         </div>

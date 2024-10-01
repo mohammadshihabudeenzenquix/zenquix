@@ -11,7 +11,7 @@ const Intro = () => {
                 <div className="flex flex-col w-full px-8 my-4 text-center lg:text-left lg:my-0 lg:w-1/2" data-aos="zoom-in" data-aos-delay="500">
                     <h3 className="text-3xl font-bold text-blue-900">About Us</h3>
                     <div className="my-6 overflow-y-auto max-h-52">
-                        <p className="text-lg font-semibold text-gray-600">
+                        <p className="text-lg text-gray-600">
                             At Zenquix, our inspiration comes from the wisdom of Zen philosophy where tranquility, clarity, precision, and finesse combined with boundless energy and agility pave the path to enlightenment. In today’s VUCA world, where change is inevitable and innovation is constant, ZenQuix embraces adaptability, agility, and efficiency with elegance to meet the evolving needs of the market and clients. Our solutions are crafted with the help of our guiding principles of simplicity, mindfulness, and focusing on what truly matters – delivering exceptional outcomes that are quick and creating a meaningful impact. With Zenquix as your trusted partner, let’s embark on a transformative journey of growth and success.
                         </p>
                     </div>
