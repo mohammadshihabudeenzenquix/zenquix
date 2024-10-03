@@ -21,4 +21,13 @@
   flex: 0 0 calc(33.33% - 20px); /* Each service panel takes about 1/3 of the container width, accounting for margin */
   max-width: calc(33.33% - 20px); /* Limit max width for better layout */
 }
+@media (max-width: 767px) {
+  .service-panel {
+    flex: 0 0 100vw; /* On small screens, each panel takes the full screen width */
+    max-width: 100vw;
+  }
+  .service-card {
+    width: 100vw; /* Ensure the service card adjusts accordingly on mobile */
+  }
+}
 }

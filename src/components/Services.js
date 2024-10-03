@@ -97,7 +97,7 @@ const HorizontalScroll = () => {
       >
         <h3 className="text-5xl font-bold text-blue-900">Our Services</h3>
       </div>
-      <div className="container1 !mt-6" ref={containerRef}>
+      <div className="container1 !mt-2 lg:!mt-6" ref={containerRef}>
         {servicesData.map((service, index) => (
           <div
             className="panel service-panel"
