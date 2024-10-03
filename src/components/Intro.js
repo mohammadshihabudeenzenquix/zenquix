@@ -1,5 +1,7 @@
 import React from 'react';
 import img from '../images/Web-developer.svg';
+import About from './About';
+import MVC from './MVC';
 
 const Intro = () => {
     return (
@@ -23,6 +25,8 @@ const Intro = () => {
                     </Link> */}
                 </div>
             </div>
+            <About/>
+            <MVC/>
         </section>
     );
 }
