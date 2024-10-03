@@ -29,7 +29,7 @@ const NavLinks = () => {
       {["home", "about", "services", "contact"].map((item, index) => (
         <HashLink
         smooth
-          to={`#${item}`}
+          to={`${item == "contact" ? "/contact" :`/#${item}`}`}
           key={item + index}
           className={`${active === item ? 'inline-flex items-center justify-center w-auto px-6 py-3 text-white bg-blue-900 shadow-xl hover:bg-blue-800 rounded-xl' : 'px-4 font-extrabold text-gray-500 hover:text-blue-900'}`}
           onClick={() => setActive(item)}

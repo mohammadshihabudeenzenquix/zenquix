@@ -62,7 +62,7 @@ const Contact = () => {
       <div>
         <NavBar />
       </div>
-      <div
+      <section
         id="contact"
         className="flex items-center justify-center w-full py-12 mt-8 bg-white lg:py-28 lg:ml-36 " data-aos="fade-down" data-aos-delay="600">
         <div className="container px-4 mx-auto my-8 lg:px-20">
@@ -156,7 +156,7 @@ const Contact = () => {
             </div>
           </div> */}
         </div>
-      </div>
+      </section>
       <Footer />
     </>
   );

@@ -9,7 +9,7 @@ const Details = ({ type, info }) => {
     <li
       ref={ref}
       className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between
-            md:w-[80%]
+            md:w-[80%] sm:w-[90%] xs:w-full
       "
     >
       <Liicon reference={ref} />
@@ -18,8 +18,12 @@ const Details = ({ type, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="font-bold text-blue-900 capitalize lg:text-2xl sm:text-xl xs:text-lg">{type}&nbsp;</h3>
-        <p className="w-full lg:mt-4 lg:text-slate-600 lg:text-lg lg:font-normal md:text-sm">{info}</p>
+        <h3 className="font-bold text-blue-900 capitalize lg:text-2xl sm:text-xl xs:text-lg text-center">
+          {type}&nbsp;
+        </h3>
+        <p className="w-full lg:mt-4 lg:text-slate-600 lg:text-lg lg:font-normal md:text-sm sm:text-xs xs:text-[14px] xs:mt-2 text-justify leading-relaxed">
+          {info}
+        </p>
       </motion.div>
     </li>
   );
@@ -34,11 +38,11 @@ const About = () => {
 
   return (
     <div className="my-40">
-      <div className="w-[50%] mx-auto relative lg:w-[70%] md:w-full">
+      <div className="w-[90%] mx-auto relative lg:w-[70%] md:w-full xs:w-full">
         <motion.div
           ref={ref}
           className="absolute left-9 top-0 w-[4px] h-full bg-blue-900 origin-top dark:bg-black
-                    md:w-[2px] md:left-[30px] xs:left-[20px]"
+                    md:w-[2px] md:left-[30px] xs:left-[15px]"
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="flex flex-col items-start justify-between w-full ml-4 xs:ml-2">
@@ -51,7 +55,7 @@ const About = () => {
           <Details
             type={"What we do?"}
             info={
-              "At ZenQuix Technologies, we offer a comprehensive range of IT services to empower businesses with seamless technology solutions. Our expert team specializes in the following areas: Network Services, Cloud Services, Datacenter Services, Software Development, End User Services, IT Staff Augmentaion & Consulting Services"
+              "At ZenQuix Technologies, we offer a comprehensive range of IT services to empower businesses with seamless technology solutions. Our expert team specializes in the following areas: Network Services, Cloud Services, Datacenter Services, Software Development, End User Services, IT Staff Augmentaion & Consulting Services."
             }
           />
           <Details
