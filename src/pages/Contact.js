@@ -80,7 +80,7 @@ const Contact = () => {
       <div>
         <NavBar />
       </div>
-      <div
+      <section
         id="contact"
         className="flex items-center justify-center w-full px-4 py-12 mt-8 bg-white md:w-[55%] md:ml-auto md:px-0 lg:ml-[14%]"
         data-aos="fade-down"
@@ -170,7 +170,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
-      </div>
+      </section>
       <Footer />
     </>
   );

@@ -88,9 +88,7 @@ const Hero = () => {
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             transition={{ duration: 1 }}
-        >
-            <NavBar />
-            
+        >            
             <div className="absolute inset-0 opacity-50 bg-gradient-to-t to-transparent"></div>
 
             <div className="relative flex items-center justify-center h-full min-h-screen p-2 mx-4 mt-8 lg:mt-4 md:p-12">
