@@ -1,7 +1,8 @@
 import { motion, useScroll } from "framer-motion";
 import React, { useRef } from "react";
+import Liicon from "./Liicon";
 
-const Details = ({ type, time, place, info }) => {
+const Details = ({ type, info }) => {
   const ref = useRef(null);
 
   return (
@@ -11,17 +12,14 @@ const Details = ({ type, time, place, info }) => {
             md:w-[80%]
       "
     >
-      {/* <Liicon reference={ref} /> */}
+      <Liicon reference={ref} />
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="text-2xl font-bold capitalize sm:text-xl xs:text-lg">{type}&nbsp;</h3>
-        <span className="font-medium capitalize text-dark/75 dark:text-light/75 xs:text-sm">
-          {time} | {place}
-        </span>
-        <p className="w-full font-medium md:text-sm">{info}</p>
+        <h3 className="font-bold text-blue-900 capitalize lg:text-2xl sm:text-xl xs:text-lg">{type}&nbsp;</h3>
+        <p className="w-full lg:mt-4 lg:text-slate-600 lg:text-lg lg:font-normal md:text-sm">{info}</p>
       </motion.div>
     </li>
   );
@@ -36,37 +34,30 @@ const Education = () => {
 
   return (
     <div className="my-40">
-      <h2 className="w-full mb-32 font-bold text-center text-8xl md:text-6xl sm:text-4xl md:mb-16">Education</h2>
-      <div className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
+      <div className="w-[50%] mx-auto relative lg:w-[70%] md:w-full">
         <motion.div
           ref={ref}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light
+          className="absolute left-9 top-0 w-[4px] h-full bg-blue-900 origin-top dark:bg-black
                     md:w-[2px] md:left-[30px] xs:left-[20px]"
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="flex flex-col items-start justify-between w-full ml-4 xs:ml-2">
           <Details
-            type={"Bachelor of Engineering in Computer Science"}
-            time={"2021-2024"}
-            place={"P.A. College of Engineering and Technology, Pollachi"}
+            type={"Who we are?"}
             info={
-              "Focused on advanced software engineering, systems analysis, and project management. Completed a significant project on web application development using React and Node.js."
+              "At Zenquix, our inspiration comes from the wisdom of Zen philosophy where tranquility, clarity, precision, and finesse combined with boundless energy and agility pave the path to enlightenment. In today’s VUCA world, where change is inevitable and innovation is constant, ZenQuix embraces adaptability, agility, and efficiency with elegance to meet the evolving needs of the market and clients. Our solutions are crafted with the help of our guiding principles of simplicity, mindfulness, and focusing on what truly matters – delivering exceptional outcomes that are quick and creating a meaningful impact. With Zenquix as your trusted partner, let’s embark on a transformative journey of growth and success."
             }
           />
           <Details
-            type={"Diploma in Mechanical Engineering"}
-            time={"2018-2021"}
-            place={"Nachimuthu Polytechnic College, Pollachi"}
+            type={"What we do?"}
             info={
-              "Studied fundamentals of mechanical systems, including thermodynamics, fluid mechanics, and material science. Undertook a capstone project on automated mechanical systems."
+              "At ZenQuix Technologies, we offer a comprehensive range of IT services to empower businesses with seamless technology solutions. Our expert team specializes in the following areas: Network Services, Cloud Services, Datacenter Services, Software Development, End User Services, IT Staff Augmentaion & Consulting Services"
             }
           />
           <Details
-            type={"Secondary School Leaving Certificate"}
-            time={"2017-2018"}
-            place={"Government High School, Gollapatti"}
+            type={"Why ZenQuix Technologies?"}
             info={
-              "Acquired foundational knowledge in various subjects including mathematics, physics, and computer science. Participated in extracurricular activities related to science and technology."
+              "Choose ZenQuix Technologies as your trusted IT partner. Experience our expertise, comprehensive solutions, tailored approach, innovation-driven mindset, customer-centricity, and unwavering reliability. We are here to transform your technology landscape, optimize your IT operations, and empower your organization for success in the digital age."
             }
           />
         </ul>
