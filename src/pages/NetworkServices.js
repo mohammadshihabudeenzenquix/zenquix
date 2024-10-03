@@ -87,7 +87,7 @@ const NetworkServices = () => {
           </form>
 
           {/* Image Section */}
-          <div className="w-full px-8 py-6 ml-auto bg-blue-100 lg:-mt-[20%] lg:w-[35%] rounded-2xl lg:ml-[-30%]">
+          <div className="w-full px-8 py-6 ml-auto bg-blue-100 lg:-mt-[20%] lg:w-[39%] rounded-2xl lg:ml-[10%]">
             <img src={net2} alt="Networking" className="rounded-2x" />
           </div>
         </div>
@@ -152,7 +152,7 @@ const NetworkServices = () => {
           </form>
 
           {/* Image Section */}
-          <div className="w-full px-8 py-6 ml-auto bg-blue-100 lg:-mt-[26%] lg:w-[35%] rounded-2xl lg:ml-[-30%]">
+          <div className="w-full px-8 py-6 ml-auto bg-blue-100 lg:-mt-[26%] lg:w-[35%] rounded-2xl lg:ml-[10%]">
             <img src={net4} alt="Networking" className='w-[100%] rounded-2x' />
           </div>
         </div>

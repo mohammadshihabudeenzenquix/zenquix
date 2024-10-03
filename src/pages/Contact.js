@@ -8,6 +8,7 @@ const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,6 +27,23 @@ const Contact = () => {
     setPhone("");
     setMessage("");
   };
+  Notify.init({
+    width: '280px',
+    position:"right-bottom", // Change to 'right-top', 'left-top', etc.
+    distance: '10px',
+    opacity: 1,
+    borderRadius: '8px',
+    timeout: 3000, // Time in milliseconds before it disappears
+    cssAnimationStyle: 'from-right', // Animation style
+    useIcon: true, // Use an icon in the notification
+    fontFamily: 'Arial, sans-serif', // Change to your preferred font
+    fontSize: '16px',
+    success: {
+      background: '#00cc66', // Background color for success notification
+      textColor: '#fff', // Text color
+      notiflixIconColor: '#fff', // Icon color
+    },
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -53,7 +71,7 @@ const Contact = () => {
         document.getElementById("submitBtn").innerHTML = "Send Message";
 
         // Error notification
-        Notify.failure('An Error ');
+        Notify.failure('An Error Occurred');
       });
   };
 
@@ -64,10 +82,13 @@ const Contact = () => {
       </div>
       <div
         id="contact"
-        className="flex items-center justify-center w-full py-12 mt-8 bg-white lg:py-28 lg:ml-36 " data-aos="fade-down" data-aos-delay="600">
-        <div className="container px-4 mx-auto my-8 lg:px-20">
+        className="flex items-center justify-center w-full px-4 py-12 mt-8 bg-white md:w-[55%] md:ml-auto md:px-0 lg:ml-[14%]"
+        data-aos="fade-down"
+        data-aos-delay="600"
+      >
+        <div className="container mx-auto lg:px-20">
           <form onSubmit={sendEmail}>
-            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[150%] lg:pl-20 rounded-2xl -mx-[50%]">
+            <div className="w-full p-8 my-4 bg-white shadow-2xl rounded-2xl md:px-12 lg:w-[150%] lg:pl-20">
               <div className="flex">
                 <h1 className="text-4xl font-bold text-center text-blue-900 uppercase lg:text-left">
                   Send us a message
@@ -137,7 +158,7 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <div className="w-1/2 my-2 lg:w-2/4">
+              <div className="w-full my-2 md:w-1/2 lg:w-2/4">
                 <button
                   type="submit"
                   id="submitBtn"
@@ -148,13 +169,6 @@ const Contact = () => {
               </div>
             </div>
           </form>
-          {/* <div className="w-full px-8 py-6 ml-auto bg-blue-100 lg:-mt-[20%] lg:w-[35%] rounded-2xl lg:ml-[70%]">
-            <div className="flex">
-              <h1 className="ml-8 text-4xl font-bold text-center text-blue-900 uppercase lg:text-left">
-                Enterprise Networking
-              </h1>
-            </div>
-          </div> */}
         </div>
       </div>
       <Footer />

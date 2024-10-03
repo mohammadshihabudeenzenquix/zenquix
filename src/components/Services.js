@@ -1,15 +1,15 @@
-import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Services.css"; // Ensure this file has relevant styles
 
 // Import service images
-import img6 from "../images/services/Consultancy.svg";
-import img7 from "../images/services/It_Staff.svg";
 import img2 from "../images/vectors/Cloud1.png";
+import img6 from "../images/vectors/consulting.png";
 import img3 from "../images/vectors/Datacenter.png";
 import img4 from "../images/vectors/Endusers.png";
+import img7 from "../images/vectors/Itstaff.png";
 import img from "../images/vectors/Network.png";
 import img5 from "../images/vectors/Software.png";
 

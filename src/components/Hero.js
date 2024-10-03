@@ -32,19 +32,19 @@ const slides = [
         title: "Software Development",
         description: "Transform your business with custom software solutions tailored to your unique needs. Our expert team delivers high-quality, scalable applications designed to streamline processes and foster innovation.",
         imgSrc: software,
-        link: "/Sofware-services",
+        link: "/Software-services",
     },
     {
         title: "Datacenter Services",
         description: "Transform your business with custom software solutions tailored to your unique needs. Our expert team delivers high-quality, scalable applications designed to streamline processes and foster innovation.",
         imgSrc: datacenter,
-        link: "/Sofware-services",
+        link: "/datacenter-services",
     },
     {
         title: "End-User Services",
         description: "Transform your business with custom software solutions tailored to your unique needs. Our expert team delivers high-quality, scalable applications designed to streamline processes and foster innovation.",
         imgSrc: enduser,
-        link: "/Sofware-services",
+        link: "/EndUser-services",
     },
 ];
 

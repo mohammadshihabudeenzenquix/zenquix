@@ -6,7 +6,7 @@
   padding: 0 10px; /* Add padding to the sides of the container */
   width: 100% !important;
   overflow-x: hidden;
-}
+
 
 .panel {
   flex: 0 0 100vw; /* Each panel takes full screen width */
@@ -20,4 +20,5 @@
   margin: 0 10px; /* Horizontal gap of 10px */
   flex: 0 0 calc(33.33% - 20px); /* Each service panel takes about 1/3 of the container width, accounting for margin */
   max-width: calc(33.33% - 20px); /* Limit max width for better layout */
+}
 }
