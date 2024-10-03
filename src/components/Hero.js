@@ -82,9 +82,9 @@ const Hero = () => {
     };
 
     return (
-        <motion.div 
+        <motion.section 
             className="relative max-h-full overflow-hidden hero" 
-            id='hero'
+            id='home'
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             transition={{ duration: 1 }}
@@ -136,7 +136,7 @@ const Hero = () => {
                     />
                 </div>
             </div>
-        </motion.div>
+        </motion.section>
     );
 }
 

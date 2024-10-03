@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 const Cta = () => {
   return (
-    <div className="flex items-center justify-center w-full text-white bg-primary h-[50%] ">
+    <section className="flex items-center justify-center w-full text-white bg-primary h-[50%] " id="contact">
       <div className="flex items-center w-full px-12 py-16 mx-8 text-center h-96 lg:text-left lg:justify-between">
         <div className="flex flex-col w-full lg:flex-row lg:justify-around">
           <div className="mb-4">
@@ -14,8 +13,8 @@ const Cta = () => {
           </div>
 
           <div className="w-full pt-6 lg:w-72 lg:mx-12">
-            <Link
-              to="/contact"
+            <a
+              href="/contact"
               className="flex items-center justify-center px-10 py-3 text-center text-white bg-transparent border rounded-lg hover:text-black hover:bg-white hover:border-blue-800 group"
             >
               Send a message
@@ -31,11 +30,11 @@ const Cta = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -3,7 +3,7 @@ import img from '../images/Web-developer.svg';
 
 const Intro = () => {
     return (
-        <div className="w-auto p-4 m-auto md:p-12" id='about'>
+        <section className="w-auto p-4 m-auto md:p-12" id='about'>
             <div className="flex flex-col-reverse justify-between py-8 lg:flex-row lg:text-left" data-aos="fade-up">
                 <div className="flex flex-col justify-center lg:w-1/2 lg:mx-4">
                     <img alt="card img" className="mx-auto rounded-t" src={img} />
@@ -23,7 +23,7 @@ const Intro = () => {
                     </Link> */}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

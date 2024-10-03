@@ -4,8 +4,7 @@ import logo from "../../images/logos/zqx-full.png";
 import NavLinks from "../Navbar/NavLinks";
 
 const NavBar = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [top, setTop] = useState(!window.scrollY);
   const [isOpen, setIsOpen] = useState(false);
 
   function handleClick() {
@@ -14,31 +13,23 @@ const NavBar = () => {
 
   useEffect(() => {
     const scrollHandler = () => {
-      if (window.scrollY > lastScrollY) {
-        // Scrolling down
-        setIsVisible(false);
-      } else {
-        // Scrolling up
-        setIsVisible(true);
-      }
-      setLastScrollY(window.scrollY);
+      window.pageYOffset > 10 ? setTop(false) : setTop(true);
     };
-
     window.addEventListener("scroll", scrollHandler);
     return () => window.removeEventListener("scroll", scrollHandler);
-  }, [lastScrollY]);
+  }, [top]);
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-transform duration-300 ease-in-out mb-16 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      } bg-white`} // Ensure the bg-white and shadow-lg are always applied
+      className={`fixed top-0 w-full z-[999999] transition duration-300 ease-in-out mb-4 ${
+        !top && "bg-white shadow-lg"
+      }`}
     >
-      <div className="flex flex-row items-center justify-between">
-        <div className="flex flex-row items-center justify-center font-semibold text-center md:px-12 md:mx-12">
+      <div className="flex flex-row items-center justify-between py-2 px-4"> {/* Adjusted padding */}
+        <div className="flex flex-row items-center justify-center font-semibold text-center">
           <div className="app__navbar-logo">
             <Link to="/">
-              <img src={logo} alt="logo" />
+              <img src={logo} alt="logo" className="h-10" /> {/* Adjust logo height */}
             </Link>
           </div>
         </div>
@@ -66,12 +57,12 @@ const NavBar = () => {
               )}
             </svg>
           </button>
-          <div className="hidden p-5 space-x-6 lg:inline-block">
+          <div className="hidden p-2 space-x-6 lg:inline-block"> {/* Reduced padding */}
             <NavLinks />
           </div>
 
           <div
-            className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md p-24 bg-white lg:hidden shadow-xl top-14 ${
+            className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md p-4 bg-white lg:hidden shadow-xl top-14 ${
               isOpen ? "block" : "hidden"
             } `}
           >

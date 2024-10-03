@@ -47,9 +47,9 @@ const HorizontalScroll = () => {
   ];
 
   return (
-    <div className="container1" ref={containerRef}>
+    <section className="container1 !mt-6" ref={containerRef} id="services">
       {servicesData.map((service, index) => (
-        <section
+        <div
           className="panel service-panel"
           ref={(el) => (panels.current[index] = el)}
           key={index}
@@ -66,9 +66,9 @@ const HorizontalScroll = () => {
               Read More
             </Link>
           </div>
-        </section>
+        </div>
       ))}
-    </div>
+    </section>
   );
 };
 
