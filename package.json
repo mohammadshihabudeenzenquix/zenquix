@@ -11,7 +11,12 @@
     "axios": "^0.24.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.5.4",
+<<<<<<< HEAD
     "notiflix": "^3.2.7",
+=======
+    "gsap": "^3.12.5",
+    "notiflix": "^3.2.2",
+>>>>>>> 8156e9c9b88a59479688a39801ebda9ee9a1840e
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",

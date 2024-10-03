@@ -8,7 +8,7 @@ import logo from "../images/logos/zqx2.png";
 
 const Footer = () => {
   return (
-    <div className="relative w-full pb-8 bg-[#153258] footer">
+    <div className="relative w-full pb-8 bg-[#153258] footer" id="footer">
       <div className="relative z-10 flex flex-col md:flex-row justify-between px-6 py-8 md:px-20 mt-10">
         <div className="w-full max-w-[1200px] flex flex-col md:flex-row justify-between mx-auto space-y-8 md:space-y-0">
           {/* Social Links & Contact */}
