@@ -1,10 +1,12 @@
 import React from 'react';
-import About from '../components/About';
 import FlexContainer from '../components/AboutMVC';
+import Cta from '../components/Cta';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Intro from '../components/Intro';
+import Education from '../components/MVC';
 import Services from '../components/Services';
+
 
 
 const Home = () => {
@@ -12,9 +14,10 @@ const Home = () => {
         <>
             <Hero />
             <Intro />
-            <About/>
+           <Education/>
             <FlexContainer/>
             <Services />
+            <Cta/>
             <Footer />
         </>
 

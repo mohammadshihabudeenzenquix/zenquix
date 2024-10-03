@@ -1,5 +1,5 @@
 import emailjs from "emailjs-com";
-import Notiflix from "notiflix";
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import NavBar from "../components/Navbar/NavBar";
@@ -46,22 +46,14 @@ const Contact = () => {
         clearInput();
 
         // Success notification
-        Notiflix.Report.success(
-          "Success",
-          "Your message has been sent successfully.",
-          "Okay"
-        );
+        Notify.success('Send Successfully!!');
       })
       .catch((error) => {
         document.getElementById("submitBtn").disabled = false;
         document.getElementById("submitBtn").innerHTML = "Send Message";
 
         // Error notification
-        Notiflix.Report.failure(
-          "An error occurred",
-          "Your message could not be sent. Please try again.",
-          "Okay"
-        );
+        Notify.failure('An Error ');
       });
   };
 
@@ -75,7 +67,7 @@ const Contact = () => {
         className="flex items-center justify-center w-full py-12 mt-8 bg-white lg:py-28 lg:ml-36 " data-aos="fade-down" data-aos-delay="600">
         <div className="container px-4 mx-auto my-8 lg:px-20">
           <form onSubmit={sendEmail}>
-            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 rounded-2xl">
+            <div className="w-full p-8 my-4 mr-auto bg-white shadow-2xl md:px-12 lg:w-[150%] lg:pl-20 rounded-2xl -mx-[50%]">
               <div className="flex">
                 <h1 className="text-4xl font-bold text-center text-blue-900 uppercase lg:text-left">
                   Send us a message
