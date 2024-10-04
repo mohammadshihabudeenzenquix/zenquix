@@ -10,13 +10,38 @@
 
 
 /* Card */
-.card {
+.card:first-child{
   width: calc(32.333% - 2rem);
   background-color: #143f9c;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform-origin: center;
-  transform: perspective(800px) rotateY(25deg);
+  transform: perspective(800px) rotateY(15deg);
+  transition: transform 0.5s, background-color 0.3s ease-in-out;
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+  cursor: pointer;
+}
+.card{
+  width: calc(32.333% - 2rem);
+  background-color: #143f9c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+  transition: transform 0.5s, background-color 0.3s ease-in-out;
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+  cursor: pointer;
+}
+.card:last-child{
+  width: calc(32.333% - 2rem);
+  background-color: #143f9c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+  transform: perspective(800px) rotateY(-15deg);
   transition: transform 0.5s, background-color 0.3s ease-in-out;
   overflow: hidden;
   height: 400px;

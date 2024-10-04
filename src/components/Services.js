@@ -29,7 +29,7 @@ const HorizontalScroll = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: () => `+=${containerRef.current.offsetWidth * sections.length}`,
+          end: "+=3500",
           pin: true,
           scrub: 1,
           snap: 1 / (sections.length - 1),
