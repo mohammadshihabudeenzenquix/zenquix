@@ -41,49 +41,49 @@ const HorizontalScroll = () => {
       img: img,
       title: "Networking Services",
       description:
-        "We provide robust and secure network solutions tailored to your organization's requirements...",
+        "We provide robust and secure network solutions tailored to your organization's requirements. From designing and implementing networks ...",
       link: "/services-details",
     },
     {
       img: img2,
       title: "Cloud Services",
       description:
-        "Harness the power of the cloud to drive agility and scalability in your operations...",
+        "Harness the power of the cloud to drive agility and scalability in your operations. Our expert team assists you in formulating a cloud strategy... ",
       link: "/cloud-services",
     },
     {
       img: img3,
       title: "Datacenter Services",
       description:
-        "Entrust your critical infrastructure to our experienced team for comprehensive datacenter management...",
+        "Entrust your critical infrastructure to our experienced team for comprehensive datacenter management. We provide end-to-end solutions, including server management",
       link: "/datacenter-services",
     },
     {
       img: img4,
       title: "End User Support",
       description:
-        "Empower your workforce with reliable and efficient IT support...",
+        "Empower your workforce with reliable and efficient IT support. Our end user services cover help desk support, software installations and upgrades",
       link: "/EndUser-services",
     },
     {
       img: img5,
       title: "Software Development",
       description:
-        "Transform your business with tailor-made software solutions that meet your specific requirements...",
+        "Transform your business with tailor-made software solutions that meet your specific requirements. Our skilled software development team brings your ideas to life, crafting custom",
       link: "/Software-services",
     },
     {
       img: img6,
       title: "Consultancy Services",
       description:
-        "Our experts provide strategic insights to help you navigate your business challenges.",
+        "Benefit from our strategic IT consulting services, where we assess your current IT landscape, identify opportunities for improvement, and provide recommendations ",
       link: "/Consulting-Services",
     },
     {
       img: img7,
       title: "IT Staffing",
       description:
-        "Find the right talent to drive your IT initiatives forward with our staffing solutions.",
+        "Fill critical skill gaps in your organization with our IT staff augmentation services. We provide highly skilled and experienced professionals to supplement your existing team",
       link: "/ITAugmentation",
     },
   ];
