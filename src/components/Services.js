@@ -2,9 +2,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import "./Services.css"; // Ensure this file has relevant styles
+import "./Services.css";
 
-// Import service images
 import img2 from "../images/vectors/Cloud1.png";
 import img6 from "../images/vectors/consulting.png";
 import img3 from "../images/vectors/Datacenter.png";
@@ -20,20 +19,32 @@ const HorizontalScroll = () => {
   const panels = useRef([]);
 
   useEffect(() => {
+    // ScrollTrigger setup
     let sections = panels.current;
-    // Center the container on load
+    
+    if (containerRef.current && sections.length > 0) {
+      const scrollAnimation = gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: () => `+=${containerRef.current.offsetWidth * sections.length}`,
+          pin: true,
+          scrub: 1,
+          snap: 1 / (sections.length - 1),
+          invalidateOnRefresh: true,
+        },
+      });
 
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        pin: true,
-        scrub: 1,
-        snap: 1 / (sections.length - 1),
-        end: "+=3500",
-      },
-    });
+      // Refresh ScrollTrigger to ensure everything is properly set up
+      ScrollTrigger.refresh();
+
+      return () => {
+        scrollAnimation.kill();
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Cleanup on unmount
+      };
+    }
   }, []);
 
   const servicesData = [
@@ -97,7 +108,7 @@ const HorizontalScroll = () => {
       >
         <h3 className="text-5xl font-bold text-blue-900">Our Services</h3>
       </div>
-      <div className="container1 !mt-2 lg:!mt-6" ref={containerRef}>
+      <aside className="container1 !mt-2 lg:!mt-6" ref={containerRef}>
         {servicesData.map((service, index) => (
           <div
             className="panel service-panel"
@@ -123,7 +134,7 @@ const HorizontalScroll = () => {
             </div>
           </div>
         ))}
-      </div>
+      </aside>
     </section>
   );
 };
