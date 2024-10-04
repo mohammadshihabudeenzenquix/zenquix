@@ -24,17 +24,35 @@ const NavLinks = () => {
     };
   }, []);
 
+  const handleHomeClick = (item) => {
+    if (item === "home") {
+      window.location.href = "/"; // Navigate to the home page and reload it
+    } else {
+      setActive(item); // Update the active state
+    }
+  };
+
   return (
     <>
       {["home", "about", "services", "contact"].map((item, index) => (
         <HashLink
-        smooth
-          to={`${item == "contact" ? "/contact" :`/#${item}`}`}
+          smooth
+          to={`${
+            item === "contact"
+              ? "/contact"
+              : item === "home"
+              ? "/"
+              : `/#${item}`
+          }`}
           key={item + index}
-          className={`${active === item ? 'inline-flex items-center justify-center w-auto px-6 py-3 text-white bg-blue-900 shadow-xl hover:bg-blue-800 rounded-xl' : 'px-4 font-extrabold text-gray-500 hover:text-blue-900'}`}
-          onClick={() => setActive(item)}
+          className={`${
+            active === item
+              ? "inline-flex items-center justify-center w-auto px-6 py-3 text-white bg-blue-900 shadow-xl hover:bg-blue-800 rounded-xl"
+              : "px-4 font-extrabold text-gray-500 hover:text-blue-900"
+          }`}
+          onClick={() => handleHomeClick(item)}
         >
-            {item}
+          {item.charAt(0).toUpperCase() + item.slice(1)}
         </HashLink>
       ))}
     </>
